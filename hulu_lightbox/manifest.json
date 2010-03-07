@@ -1,0 +1,12 @@
+{
+	"content_scripts": [ {
+		"exclude_globs": [  ],
+		"include_globs": [ "*hulu.com/profile/queue*" ],
+		"js": [ "hulu_lightbox.js" ],
+		"matches": [ "http://*/*", "https://*/*" ]
+	} ],
+	"description": "Dims the hulu queue before opening the popout links, so you still have dark around the window",
+	"name": "Hulu Pop Out Lightbox",
+	"permissions": [ "http://www.hulu.com/profile/queue*" ],
+	"version": "1.0"
+}
