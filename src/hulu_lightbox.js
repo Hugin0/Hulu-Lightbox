@@ -69,7 +69,7 @@ for (var i = 0; i < allPopOuts.snapshotLength; i++) {
 	var popOutLink = thisLink.getAttribute('onclick');
 	
 	// here to check the function that's suppose to be called.
-	thisLink.firstChild.setAttribute('title', popOutLink); 
+	// thisLink.firstChild.setAttribute('title', popOutLink); 
 
 	// set the new event handler for when the link is clicked.
 	thisLink.onclick = function(myOverlay, popOutLink) {
