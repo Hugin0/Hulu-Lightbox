@@ -8,5 +8,5 @@
 	"description": "Dims the hulu queue before opening the popout links, so you still have dark around the window",
 	"name": "Hulu Pop Out Lightbox",
 	"permissions": [ "http://www.hulu.com/profile/queue*" ],
-	"version": "1.0"
+	"version": "1.1"
 }

@@ -58,7 +58,7 @@ var myOverlay = SetupOverlay(body);
 // Find the popout links.  They are located in a cell labeled c6 in the html
 // for the queue page.
 allPopOuts = document.evaluate( 
-	"//td[@class='c6']/a[@href]", // all the anchors with an href that are children of a td of class:c6
+	"//td[@class='c5']/a[contains(@onclick, 'popOutWithCid')]", // all the anchors with an href that are children of a td of class:c6
 	document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
 for (var i = 0; i < allPopOuts.snapshotLength; i++) {
@@ -69,7 +69,7 @@ for (var i = 0; i < allPopOuts.snapshotLength; i++) {
 	var popOutLink = thisLink.getAttribute('onclick');
 	
 	// here to check the function that's suppose to be called.
-	// thisLink.firstChild.setAttribute('title', popOutLink); 
+	thisLink.firstChild.setAttribute('title', popOutLink); 
 
 	// set the new event handler for when the link is clicked.
 	thisLink.onclick = function(myOverlay, popOutLink) {
